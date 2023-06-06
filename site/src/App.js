@@ -7,7 +7,8 @@ function App() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost/api.php/overview', {
+    fetch('http://localhost/api.php?endpoint=overview', {
+      method: 'GET',
       mode: 'cors'
     })
       .then(response => response.json())
@@ -34,7 +35,9 @@ function App() {
       <h1>Data:</h1>
       <ul>
         {data.map(item => (
-          <li key={item.id}>{item.name}</li>
+          <li key={item.id}>
+            <h1>{item.id}</h1><h2>{item.title}</h2><p>{item.shortText}</p>
+          </li>
         ))}
       </ul>
     </div>
