@@ -32,7 +32,7 @@ function Overview() {
     }
 
     return (
-        <div>
+        <div className="overview">
             <h1>Blog posts</h1>
             <div className="cardsTable">
                 {data.map((item) => (
