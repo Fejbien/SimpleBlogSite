@@ -34,11 +34,11 @@ function Overview() {
     }
 
     return (
-        <div>
-            <h1>Data:</h1>
-            <h1>{data.id}</h1>
-            <h2>{data.title}</h2>
-            <p>{data.text}</p>
+        <div className="blogPost">
+            <div className="post gradient-border">
+                <h1 className="title">{data.title}</h1>
+                <p>{data.text}</p>
+            </div>
         </div>
     );
 }
