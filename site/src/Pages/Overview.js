@@ -33,17 +33,16 @@ function Overview() {
 
     return (
         <div>
-            <h1>Data:</h1>
-            <ul>
+            <h1>Blog posts</h1>
+            <div className="cardsTable">
                 {data.map((item) => (
-                    <li key={item.id}>
-                        <h1>{item.id}</h1>
-                        <h2>{item.title}</h2>
+                    <div className="card gradient-border">
+                        <h1 className="title">{item.title}</h1>
                         <p className="shortText">{item.shortText}</p>
                         <Link to={"/blogpost/" + item.id}>Show blog post</Link>
-                    </li>
+                    </div>
                 ))}
-            </ul>
+            </div>
         </div>
     );
 }
