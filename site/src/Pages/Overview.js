@@ -35,7 +35,7 @@ function Overview() {
         <div className="overview">
             <div className="cardsTable">
                 {data.map((item) => (
-                    <div className="card gradient-border">
+                    <div className="card gradient-border" key={item.id}>
                         <h1 className="title">{item.title}</h1>
                         <p className="shortText">{item.shortText}</p>
                         <Link to={"/blogpost/" + item.id}>Show blog post</Link>

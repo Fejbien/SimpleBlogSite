@@ -1,4 +1,5 @@
 import "./Header.css";
+import userIcon from "../icons/user.svg";
 import { Link, useLocation } from "react-router-dom";
 
 function Header() {
@@ -13,13 +14,24 @@ function Header() {
 
     return (
         <div className="header">
-            <p className="links">
+            <p className="links return">
                 <Link to={"/"}>⮐</Link>
             </p>
             <h1>{headerName}</h1>
-            <p className="links">
-                <a href="mailto:fabian.sucholas123@gmail.com">✉</a>
-            </p>
+            <div className="actions">
+                <p className="links">
+                    <a href="mailto:fabian.sucholas123@gmail.com">✉</a>
+                </p>
+                <p className="links">
+                    <Link to={"/login"}>
+                        <img
+                            src={userIcon}
+                            alt="login button"
+                            className="svgIcon"
+                        ></img>
+                    </Link>
+                </p>
+            </div>
         </div>
     );
 }
