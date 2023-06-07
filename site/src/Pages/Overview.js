@@ -1,3 +1,4 @@
+import "./Overview.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -38,7 +39,7 @@ function Overview() {
                     <li key={item.id}>
                         <h1>{item.id}</h1>
                         <h2>{item.title}</h2>
-                        <p>{item.shortText}</p>
+                        <p className="shortText">{item.shortText}</p>
                         <Link to={"/blogpost/" + item.id}>Show blog post</Link>
                     </li>
                 ))}

@@ -1,3 +1,4 @@
+import "./BlogPost.css";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 

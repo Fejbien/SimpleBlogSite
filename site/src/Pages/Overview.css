@@ -1,0 +1,9 @@
+.shortText{
+    font-size: 1.2em;
+    text-shadow: none;
+    font-weight: 500;
+}
+
+.shortText::after{
+    content: "...";
+}
