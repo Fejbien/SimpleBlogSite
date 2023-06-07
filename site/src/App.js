@@ -3,18 +3,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Overview from "./Pages/Overview";
 import BlogPost from "./Pages/BlogPost";
-
-function Header() {
-    return <h1>Hej</h1>;
-}
+import Header from "./Elements/Header";
 
 function App() {
     return (
         <BrowserRouter>
             <Header />
             <Routes>
-                <Route path="/" element={<Overview />} />
-                <Route path="/blogpost/:id" element={<BlogPost />} />
+                <Route path={"/"} element={<Overview />} />
+                <Route path={"/blogpost/:id"} element={<BlogPost />} />
             </Routes>
         </BrowserRouter>
     );

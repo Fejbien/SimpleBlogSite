@@ -18,7 +18,7 @@ header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
 if ($_SERVER["REQUEST_METHOD"] === "GET") {
     if (isset($_GET["endpoint"])) {
         if ($_GET["endpoint"] === "overview") {
-            $sql = "SELECT `id`, `title`, LEFT(`text`, 40) AS `shortText` FROM `blogPosts` WHERE 1;";
+            $sql = "SELECT `id`, `title`, LEFT(`text`, 120) AS `shortText` FROM `blogPosts` WHERE 1;";
             $res = $conn->query($sql);
 
             $elements = array();
