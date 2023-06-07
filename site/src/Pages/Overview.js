@@ -33,7 +33,6 @@ function Overview() {
 
     return (
         <div className="overview">
-            <h1>Blog posts</h1>
             <div className="cardsTable">
                 {data.map((item) => (
                     <div className="card gradient-border">
