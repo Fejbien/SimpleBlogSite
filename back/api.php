@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
             }
 
             echo json_encode($elements);
-        } elseif ($_GET["endpoint"] === "blogPost") {
+        } elseif ($_GET["endpoint"] === "blogpost") {
             if (isset($_GET["id"])) {
                 $sql = "SELECT `title`, `text` FROM `blogposts` WHERE `id` = " . $_GET["id"];
                 $res = $conn->query($sql);
@@ -52,4 +52,3 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
 }
 
 $conn->close();
-?>

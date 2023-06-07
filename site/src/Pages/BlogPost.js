@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 function Overview() {
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
+    const id = useParams().id;
 
     useEffect(() => {
-        fetch("http://localhost/api.php?endpoint=overview", {
+        fetch("http://localhost/api.php?endpoint=blogpost&id=" + id, {
             method: "GET",
             mode: "cors",
         })
@@ -33,16 +34,9 @@ function Overview() {
     return (
         <div>
             <h1>Data:</h1>
-            <ul>
-                {data.map((item) => (
-                    <li key={item.id}>
-                        <h1>{item.id}</h1>
-                        <h2>{item.title}</h2>
-                        <p>{item.shortText}</p>
-                        <Link to={"/blogpost/" + item.id}>Show blog post</Link>
-                    </li>
-                ))}
-            </ul>
+            <h1>{data.id}</h1>
+            <h2>{data.title}</h2>
+            <p>{data.text}</p>
         </div>
     );
 }
