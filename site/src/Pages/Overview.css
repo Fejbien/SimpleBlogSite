@@ -1,74 +1,83 @@
-.overview{
+.overview {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.cardsTable{
+.overview > .cardsTable {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.card{
+.overview > .cardsTable > .card {
     margin: 20px;
     padding: 20px;
     padding-top: 0px;
     width: 60em;
 }
 
-.card > h1{
+.overview > .cardsTable > h1 {
     margin-top: 14px;
 }
 
-.card > a{
+.overview > .cardsTable > .card > a {
     text-decoration: none;
     color: #07b39b;
 }
 
-.card > a::after{
+.overview > .cardsTable > .card > a::after {
     content: " 🔗";
 }
 
-.card > a:hover{
+.overview > .cardsTable > .card > a:hover {
     color: #c0810c;
 }
 
-.title{
+.overview > .cardsTable > .card > .title {
     font-size: 2em;
 }
 
-.shortText{
+.overview > .cardsTable > .card > .shortText {
     font-size: 1.2em;
     text-shadow: none;
     font-weight: 500;
 }
 
-.shortText::after{
+.overview > .cardsTable > .card > .shortText::after {
     content: "...";
 }
 
 .gradient-border {
     --borderWidth: 3px;
-    background: #1D1F20;
+    background: #1d1f20;
     position: relative;
     border-radius: var(--borderWidth);
 }
 
 .gradient-border:after {
-    content: '';
+    content: "";
     position: absolute;
     top: calc(-1 * var(--borderWidth));
     left: calc(-1 * var(--borderWidth));
     height: calc(100% + var(--borderWidth) * 2);
     width: calc(100% + var(--borderWidth) * 2);
-    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    background: linear-gradient(
+        60deg,
+        #f79533,
+        #f37055,
+        #ef4e7b,
+        #a166ab,
+        #5073b8,
+        #1098ad,
+        #07b39b,
+        #6fba82
+    );
     border-radius: calc(2 * var(--borderWidth));
     z-index: -1;
     animation: animatedgradient 5s ease alternate infinite;
     background-size: 300% 300%;
 }
-
 
 @keyframes animatedgradient {
     0% {

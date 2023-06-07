@@ -1,4 +1,4 @@
-.header{
+.header {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -11,16 +11,16 @@
     text-shadow: black 1px 1px 2px;
 }
 
-.header > .links{
+.header > .links {
     color: white;
     font-size: 2em;
-} 
+}
 
-.header > .links > a{
+.header > .links > a {
     color: white;
     text-decoration: none;
 }
 
-.header > .links > a:hover{
+.header > .links > a:hover {
     color: #c0810c;
 }

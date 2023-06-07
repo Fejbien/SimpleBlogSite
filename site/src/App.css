@@ -1,6 +1,13 @@
-body{
-  color: white;
-  background-image: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
-  background-attachment: fixed;
-  height: 100vh;
+body {
+    color: white;
+    background-image: linear-gradient(
+        to right bottom,
+        #051937,
+        #004d7a,
+        #008793,
+        #00bf72,
+        #a8eb12
+    );
+    background-attachment: fixed;
+    height: 100vh;
 }

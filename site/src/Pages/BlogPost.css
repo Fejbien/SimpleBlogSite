@@ -1,45 +1,59 @@
-.blogPost{
+.blogPost {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.post{
+.blogPost > .post {
     margin: 20px;
     padding: 20px;
     padding-top: 0px;
     width: 60em;
+
+    text-align: justify;
+}
+
+.blogPost > .post > .title {
+    font-size: 3em;
+    text-align: center;
+}
+
+.blogPost > .post > p {
     font-size: 1.2em;
     text-shadow: none;
     font-weight: 500;
 }
 
-.title {
-    font-size: 2em;
-    text-align: center;
-}
-
 .gradient-border {
     --borderWidth: 3px;
-    background: #1D1F20;
+    background: #1d1f20;
     position: relative;
     border-radius: var(--borderWidth);
 }
 
 .gradient-border:after {
-    content: '';
+    content: "";
     position: absolute;
     top: calc(-1 * var(--borderWidth));
     left: calc(-1 * var(--borderWidth));
     height: calc(100% + var(--borderWidth) * 2);
     width: calc(100% + var(--borderWidth) * 2);
-    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    background: linear-gradient(
+        60deg,
+        #f79533,
+        #f37055,
+        #ef4e7b,
+        #a166ab,
+        #5073b8,
+        #1098ad,
+        #07b39b,
+        #6fba82
+    );
     border-radius: calc(2 * var(--borderWidth));
     z-index: -1;
     animation: animatedgradient 5s ease alternate infinite;
     background-size: 300% 300%;
 }
-
 
 @keyframes animatedgradient {
     0% {
