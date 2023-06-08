@@ -18,7 +18,7 @@ header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
 if ($_SERVER["REQUEST_METHOD"] === "GET") {
     if (isset($_GET["endpoint"])) {
         if ($_GET["endpoint"] === "overview") {
-            $sql = "SELECT `id`, `title`, LEFT(`text`, 120) AS `shortText` FROM `blogPosts` WHERE 1;";
+            $sql = "SELECT `id`, `title`, LEFT(`text`, 120) AS `shortText` FROM `blogpost` WHERE 1;";
             $res = $conn->query($sql);
 
             $elements = array();
@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
             echo json_encode($elements);
         } elseif ($_GET["endpoint"] === "blogpost") {
             if (isset($_GET["id"])) {
-                $sql = "SELECT `title`, `text` FROM `blogposts` WHERE `id` = " . $_GET["id"];
+                $sql = "SELECT `title`, `text` FROM `blogpost` WHERE `id` = " . $_GET["id"];
                 $res = $conn->query($sql);
 
                 if ($res->num_rows > 0) {
