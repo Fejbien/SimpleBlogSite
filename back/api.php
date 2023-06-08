@@ -45,8 +45,13 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
     }
 } elseif ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (isset($_POST["endpoint"])) {
+        if ($_POST["endpoint"] === "login") {
+        }
+
+        if ($_POST["endpoint"] === "register") {
+        }
+
         if ($_POST["endpoint"] === "add") {
-            // Handle the "add" endpoint
         }
     }
 }
