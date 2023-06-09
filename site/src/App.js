@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Overview from "./Pages/Overview";
 import BlogPost from "./Pages/BlogPost";
+import LoginPage from "./Pages/LoginPage";
+
 import Header from "./Elements/Header";
 
 function App() {
@@ -12,6 +14,7 @@ function App() {
             <Routes>
                 <Route path={"/"} element={<Overview />} />
                 <Route path={"/blogpost/:id"} element={<BlogPost />} />
+                <Route path={"/login"} element={<LoginPage />} />
             </Routes>
         </BrowserRouter>
     );
