@@ -1,4 +1,7 @@
 <?php
+
+use Firebase\JWT;
+
 $servername = "localhost";
 $username = "root";
 $password = "";
