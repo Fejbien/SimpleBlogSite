@@ -21,7 +21,7 @@ header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
 if ($_SERVER["REQUEST_METHOD"] === "GET") {
     if (isset($_GET["endpoint"])) {
         if ($_GET["endpoint"] === "overview") {
-            $sql = "SELECT `id`, `title`, LEFT(`text`, 120) AS `shortText` FROM `blogposts` WHERE 1;";
+            $sql = "SELECT bp.id AS 'id', bp.title AS 'title', LEFT(bp.text, 120) AS 'shortText', bp.publishDate AS 'published', u.name as 'author' FROM `blogpost` AS bp JOIN USER AS u ON u.id = bp.author_id WHERE 1;";
             $res = $conn->query($sql);
 
             $elements = array();
@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
             echo json_encode($elements);
         } elseif ($_GET["endpoint"] === "blogpost") {
             if (isset($_GET["id"])) {
-                $sql = "SELECT `title`, `text` FROM `blogposts` WHERE `id` = " . $_GET["id"];
+                $sql = "SELECT bp.id AS 'id', bp.title AS 'title', bp.text AS 'text', bp.publishDate AS 'published', u.name as 'author' FROM `blogpost` AS bp JOIN USER AS u ON u.id = bp.author_id WHERE bp.id = " . $_GET["id"];
                 $res = $conn->query($sql);
 
                 if ($res->num_rows > 0) {

@@ -37,6 +37,16 @@ function Overview() {
                 {data.map((item) => (
                     <div className="card gradient-border" key={item.id}>
                         <h1 className="title">{item.title}</h1>
+                        <div className="authorAndDate">
+                            <p>Author: {item.author}</p>
+                            <p>
+                                Published:{" "}
+                                {item.published.substring(
+                                    0,
+                                    item.published.length - 3
+                                )}
+                            </p>
+                        </div>
                         <p className="shortText">{item.shortText}</p>
                         <Link to={"/blogpost/" + item.id}>Show blog post</Link>
                     </div>

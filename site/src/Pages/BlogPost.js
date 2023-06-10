@@ -37,6 +37,13 @@ function Overview() {
         <div className="blogPost">
             <div className="post gradient-border">
                 <h1 className="title">{data.title}</h1>
+                <div className="authorAndDate">
+                    <p>Author: {data.author}</p>
+                    <p>
+                        Published:{" "}
+                        {data.published.substring(0, data.published.length - 3)}
+                    </p>
+                </div>
                 <p>{data.text}</p>
             </div>
         </div>
