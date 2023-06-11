@@ -56,6 +56,9 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
 
         if ($_POST["endpoint"] === "add") {
         }
+
+        if ($_POST["endpoint"] === "edit") {
+        }
     }
 }
 
