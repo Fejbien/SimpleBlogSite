@@ -7,6 +7,7 @@ function LoginPage() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        fetch("http://localhost/api.php?endpoint=login", { method: "Post" });
     };
 
     return (
